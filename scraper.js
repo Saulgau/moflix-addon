@@ -2,7 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const fs = require("fs");
 
-// URL der Website
+// Website-URL
 const URL = "https://moflix-stream.xyz/homepage";
 
 // Scraping-Funktion
@@ -27,7 +27,7 @@ async function scrapeMoflix() {
             });
         });
 
-        // Daten speichern
+        // Speichern
         fs.writeFileSync("movies.json", JSON.stringify(movies, null, 2));
         console.log("Filme erfolgreich gespeichert!");
     } catch (error) {
