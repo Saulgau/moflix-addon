@@ -1,7 +1,7 @@
 const { addonBuilder } = require("stremio-addon-sdk");
 const fs = require("fs");
 
-// Manifest für Stremio
+// Manifest
 const manifest = {
     id: "community.moflix",
     version: "1.0.0",
@@ -18,13 +18,12 @@ const manifest = {
     ]
 };
 
-// Filme aus JSON laden
+// Filme laden
 function loadMovies() {
     try {
         const data = fs.readFileSync("movies.json", "utf-8");
         return JSON.parse(data);
-    } catch (error) {
-        console.error("Fehler beim Laden der Filme:", error);
+    } catch {
         return [];
     }
 }
