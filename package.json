@@ -4,9 +4,11 @@
   "description": "Ein Add-on für Stremio mit Moflix-Filmen",
   "main": "addon.js",
   "scripts": {
-    "start": "node addon.js"
+    "start": "node scraper.js && node addon.js"
   },
   "dependencies": {
-    "stremio-addon-sdk": "^1.0.0"
+    "stremio-addon-sdk": "^1.0.0",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0"
   }
 }
